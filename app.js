@@ -50,12 +50,9 @@ function initialisiereApp() {
 
 // Karte
 function initialisiereKarte() {
-  if (!window.L) {
-    kartenElement.classList.add("map-unavailable");
-    kartenElement.textContent =
-      "Die Kartenbibliothek konnte nicht geladen werden. Prüfe deine Internetverbindung.";
-    kartenMeldung.textContent =
-      "Du kannst die Koordinaten weiterhin von Hand eingeben.";
+  // Die App funktioniert zunächst auch ohne Karte. Sobald die Lernenden
+  // Leaflet und den Kartencontainer ergänzen, wird die Karte initialisiert.
+  if (!kartenElement || !window.L) {
     return;
   }
 
